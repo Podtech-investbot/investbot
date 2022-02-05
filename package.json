@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Podtech-investbot/investbot/issues"
   },
-  "homepage": "https://github.com/Podtech-investbot/investbot#readme"
+  "homepage": "https://github.com/Podtech-investbot/investbot#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.56.0"
+  }
 }
