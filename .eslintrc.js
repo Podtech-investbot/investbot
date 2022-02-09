@@ -1,39 +1,42 @@
 module.exports = {
-  'env': {
-    'browser': true,
-    'commonjs': true,
-    'es2021': true
+  env: {
+    browser: true,
+    commonjs: true,
+    es2021: true
   },
-  'extends': 'eslint:recommended',
-  'parserOptions': {
-    'ecmaVersion': 'latest'
+  extends: ['prettier', 'eslint:recommended'],
+  plugins: ['prettier'],
+  parserOptions: {
+    ecmaVersion: 'latest'
   },
-  'rules': {
-    'indent': [
+  rules: {
+    'prettier/prettier': [
       'error',
-      2
+      {
+        trailingComma: 'none',
+        tabWidth: 2,
+        semi: true,
+        singleQuote: true,
+        arrowParens: 'always',
+        endOfLine: 'auto'
+      }
     ],
-    'linebreak-style': [
-      'error',
-      'unix'
-    ],
-    'quotes': [
-      'error',
-      'single'
-    ],
-    'semi': [
-      'error',
-      'always'
-    ]
+    'no-console': 'error',
+    'no-debugger': 'error',
+    'comma-dangle': 'off',
+    'no-unused-vars': ['error', { argsIgnorePattern: 'next' }],
+    'no-empty': 'error',
+    'no-var': 'error',
+    'no-unsafe-finally': 'off',
+    'no-useless-escape': 'off',
+    'nuxt/no-cjs-in-config': 'off',
+    camelcase: ['off']
   },
-  'overrides': [
+  overrides: [
     {
-      'files': [
-        '**/*.spec.js',
-        '**/*.spec.jsx'
-      ],
-      'env': {
-        'jest': true
+      files: ['**/*.spec.js', '**/*.spec.jsx'],
+      env: {
+        jest: true
       }
     }
   ]
