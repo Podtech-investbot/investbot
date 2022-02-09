@@ -6,7 +6,7 @@ bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
   bot.sendMessage(chatId, 'Olá. Como vai?');
 });
-
+console.log('error');
 bot.onText(/\/indicadores (.+)/, (msg, match) => {
   const chatId = msg.chat.id;
   const stockCode = match[1];
