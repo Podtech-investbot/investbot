@@ -25,5 +25,16 @@ module.exports = {
       'error',
       'always'
     ]
-  }
+  },
+  'overrides': [
+    {
+      'files': [
+        '**/*.spec.js',
+        '**/*.spec.jsx'
+      ],
+      'env': {
+        'jest': true
+      }
+    }
+  ]
 };
