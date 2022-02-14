@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/Podtech-investbot/investbot#readme",
   "dependencies": {
-    "node-telegram-bot-api": "^0.56.0"
+    "node-telegram-bot-api": "^0.56.0",
+    "puppeteer": "^13.3.1"
   },
   "devDependencies": {
     "eslint": "^8.8.0",
