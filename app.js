@@ -21,7 +21,7 @@ bot.onText(/\/indicadores (.+)/, (msg, match) => {
         `A cotação atual para ${stockCode}  é: ${cotacao}`
       );
     })
-    .catch(function (err) {
+    .catch(function () {
       bot.sendMessage(chatId, 'Oppss, não encontramos o ativo! :/');
     });
 });
